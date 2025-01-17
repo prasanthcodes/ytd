@@ -1,0 +1,82 @@
+D:\1>yt-dlp.exe "https://www.youtube.com/watch?v=21bPE0BJdOA"  --list-formats
+[youtube] Extracting URL: https://www.youtube.com/watch?v=21bPE0BJdOA
+[youtube] 21bPE0BJdOA: Downloading webpage
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+[youtube] 21bPE0BJdOA: Downloading ios player API JSON
+[youtube] 21bPE0BJdOA: Downloading player 1f8742dc
+[youtube] 21bPE0BJdOA: Downloading web player API JSON
+[youtube] 21bPE0BJdOA: Downloading m3u8 information
+[info] Available formats for 21bPE0BJdOA:
+ID      EXT   RESOLUTION FPS CH │   FILESIZE   TBR PROTO │ VCODEC          VBR ACODEC      ABR ASR MORE INFO
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+sb2     mhtml 48x27        1    │                  mhtml │ images                                  storyboard
+sb1     mhtml 80x45        1    │                  mhtml │ images                                  storyboard
+sb0     mhtml 160x90       1    │                  mhtml │ images                                  storyboard
+233     mp4   audio only        │                  m3u8  │ audio only          unknown             Default
+234     mp4   audio only        │                  m3u8  │ audio only          unknown             Default
+139-drc m4a   audio only      2 │  430.28KiB   49k https │ audio only          mp4a.40.5   49k 22k low, DRC, m4a_dash
+249-drc webm  audio only      2 │  466.73KiB   53k https │ audio only          opus        53k 48k low, DRC, webm_dash
+250-drc webm  audio only      2 │  611.34KiB   70k https │ audio only          opus        70k 48k low, DRC, webm_dash
+139     m4a   audio only      2 │  430.04KiB   49k https │ audio only          mp4a.40.5   49k 22k low, m4a_dash
+249     webm  audio only      2 │  459.15KiB   52k https │ audio only          opus        52k 48k low, webm_dash
+250     webm  audio only      2 │  602.70KiB   69k https │ audio only          opus        69k 48k low, webm_dash
+256     m4a   audio only      6 │    1.68MiB  195k https │ audio only          mp4a.40.5  195k 24k low, m4a_dash
+140-drc m4a   audio only      2 │    1.11MiB  130k https │ audio only          mp4a.40.2  130k 44k medium, DRC, m4a_dash
+
+251-drc webm  audio only      2 │    1.17MiB  136k https │ audio only          opus       136k 48k medium, DRC, webm_dash
+140     m4a   audio only      2 │    1.11MiB  130k https │ audio only          mp4a.40.2  130k 44k medium, m4a_dash
+251     webm  audio only      2 │    1.13MiB  132k https │ audio only          opus       132k 48k medium, webm_dash
+380     m4a   audio only      6 │    3.30MiB  384k https │ audio only          ac-3       384k 48k high, m4a_dash
+328     m4a   audio only      6 │    3.30MiB  384k https │ audio only          ec-3       384k 48k high, m4a_dash
+258     m4a   audio only      6 │    3.33MiB  388k https │ audio only          mp4a.40.2  388k 48k high, m4a_dash
+602     mp4   256x144     15    │ ~723.92KiB   82k m3u8  │ vp09.00.10.08   82k video only
+269     mp4   256x144     30    │ ~  1.11MiB  129k m3u8  │ avc1.4D400C    129k video only
+160     mp4   256x144     30    │  321.70KiB   37k https │ avc1.4D400C     37k video only          144p, mp4_dash
+603     mp4   256x144     30    │ ~  1.09MiB  127k m3u8  │ vp09.00.11.08  127k video only
+278     webm  256x144     30    │  362.91KiB   41k https │ vp9             41k video only          144p, webm_dash
+229     mp4   426x240     30    │ ~  1.95MiB  227k m3u8  │ avc1.4D4015    227k video only
+133     mp4   426x240     30    │  648.50KiB   74k https │ avc1.4D4015     74k video only          240p, mp4_dash
+604     mp4   426x240     30    │ ~  1.59MiB  185k m3u8  │ vp09.00.20.08  185k video only
+242     webm  426x240     30    │  495.85KiB   56k https │ vp9             56k video only          240p, webm_dash
+230     mp4   640x360     30    │ ~  4.16MiB  484k m3u8  │ avc1.4D401E    484k video only
+134     mp4   640x360     30    │    1.17MiB  136k https │ avc1.4D401E    136k video only          360p, mp4_dash
+18      mp4   640x360     30  2 │ ≈  2.27MiB  265k https │ avc1.42001E         mp4a.40.2       44k 360p
+605     mp4   640x360     30    │ ~  3.18MiB  371k m3u8  │ vp09.00.21.08  371k video only
+243     webm  640x360     30    │  828.58KiB   94k https │ vp9             94k video only          360p, webm_dash
+231     mp4   854x480     30    │ ~  6.17MiB  719k m3u8  │ avc1.4D401F    719k video only
+135     mp4   854x480     30    │    1.86MiB  217k https │ avc1.4D401F    217k video only          480p, mp4_dash
+606     mp4   854x480     30    │ ~  4.29MiB  500k m3u8  │ vp09.00.30.08  500k video only
+244     webm  854x480     30    │    1.26MiB  146k https │ vp9            146k video only          480p, webm_dash
+232     mp4   1280x720    30    │ ~ 10.58MiB 1232k m3u8  │ avc1.64001F   1232k video only
+136     mp4   1280x720    30    │    3.40MiB  397k https │ avc1.64001F    397k video only          720p, mp4_dash
+609     mp4   1280x720    30    │ ~  7.11MiB  828k m3u8  │ vp09.00.31.08  828k video only
+247     webm  1280x720    30    │    2.69MiB  314k https │ vp9            314k video only          720p, webm_dash
+270     mp4   1920x1080   30    │ ~ 18.06MiB 2104k m3u8  │ avc1.640028   2104k video only
+137     mp4   1920x1080   30    │    6.25MiB  729k https │ avc1.640028    729k video only          1080p, mp4_dash
+614     mp4   1920x1080   30    │ ~ 12.85MiB 1497k m3u8  │ vp09.00.40.08 1497k video only
+248     webm  1920x1080   30    │    3.72MiB  434k https │ vp9            434k video only          1080p, webm_dash
+
+
+
+
+
+
+
+
+
+If it should help, Here is the data as json
+
+{ "VideoFormats":{ "1080p":[699,399,335,303,248,299,137], "720p":[698,398,334,302,247,298,136], "480p":[697,397,333,244,135], "360p":[696,396,332,243,134], "240p":[695,395,331,242,133], "144p":[694,394,330,278,160], "1440p":[700,400,336,308,271,304,264], "2K":[701,401,337,315,313,305,266], "4K":[402,571,272,138] }, "AudioFormats":{ "AAC_LC 128Kbps": 140, "AAC_LC 256Kbps": 141, "AAC_HEv1 48Kbps":139, "Opus ~50Kbps":249, "Opus ~70Kbps":250, "Opus <=160Kbps":251, "AAC_HEv1 192Kbps":256, "AAC_LC_5.1 384Kbps":258, "AAC_LC_5.1 256Kbps":327, "Opus ~480Kbps":338 } }
+
+
+
+yt-dlp.exe "https://youtu.be/dLkKrzvmTfE?si=Vu7coCHX7jwOblWc"  -f "bestvideo[height<=?1080]+bestaudio/best"
+
+
+
+https://gist.github.com/AgentOak/34d47c65b1d28829bb17c24c04a0096f
+
+https://github.com/ytdl-org/youtube-dl/?tab=readme-ov-file#format-selection
+
+
+
