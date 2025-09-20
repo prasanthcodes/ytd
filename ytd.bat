@@ -1,6 +1,11 @@
 rem yt-dlp.exe "https://www.youtube.com/watch?v=21bPE0BJdOA"  --list-formats
 rem yt-dlp.exe "https://www.youtube.com/watch?v=21bPE0BJdOA"  -f "bestvideo[height<=?1080]+(258/256/140)/best"
 
+yt-dlp.exe --ignore-errors --add-metadata --write-sub --sub-lang en,ta --embed-subs -f "(299/137)+(258/256/140)/bestvideo[height<=?1080]+(258/256/140)/bestvideo[ext=webm]+251/bestvideo[ext=webm]+(250/249)/best" https://www.youtube.com/watch?v=KwR64Zqov3k
+
+
+pause
+
 for /f "usebackq tokens=1-2 delims=;" %%a in ("new5.csv") do (
       echo %%a %%b 
 	  
