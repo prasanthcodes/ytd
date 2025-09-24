@@ -1,8 +1,11 @@
 rem yt-dlp.exe "https://www.youtube.com/watch?v=21bPE0BJdOA"  --list-formats
 rem yt-dlp.exe "https://www.youtube.com/watch?v=21bPE0BJdOA"  -f "bestvideo[height<=?1080]+(258/256/140)/best"
 
-yt-dlp.exe --ignore-errors --add-metadata --write-sub --sub-lang en,ta --embed-subs -f "(299/137)+(258/256/140)/bestvideo[height<=?1080]+(258/256/140)/bestvideo[ext=webm]+251/bestvideo[ext=webm]+(250/249)/best" https://www.youtube.com/watch?v=KwR64Zqov3k
+rem --- video download ---
+rem yt-dlp.exe --ignore-errors --add-metadata --write-sub --sub-lang en,ta --embed-subs -f "(299/137)+(258/256/140)/bestvideo[height<=?1080]+(258/256/140)/bestvideo[ext=webm]+251/bestvideo[ext=webm]+(250/249)/best" https://www.youtube.com/watch?v=Hxbeh-_nNZ0
 
+rem --- audio download ---
+yt-dlp.exe --ignore-errors -f "258/256/140/251/250/249" https://www.youtube.com/watch?v=QqcosEzEjdw
 
 pause
 
