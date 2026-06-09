@@ -5,9 +5,9 @@ Learn How to Copy YouTube playlist video URLs using code in 2023
     Step 3: To activate the automated scrolling function, open the browser console and paste the first code snippet labeled as “Code snippet 1”. This snippet will initiate the automated scrolling process, allowing us to gather the necessary data from the YouTube playlist. Here is the code snippet for your reference:
 
 
-    //COPY & PASTE CODE 1:
+//COPY & PASTE CODE 1:
 
-    let goToBottom = setInterval(() => window.scrollBy(0, 400), 1000);
+let goToBottom = setInterval(() => window.scrollBy(0, 400), 1000);
 
 
 
@@ -16,23 +16,39 @@ Once you have pasted the code snippet into the console and pressed the ENTER key
 Step 4: Once the scrolling action concludes, you can continue by pasting the second code snippet labeled as “Code snippet 2”. This specific code snippet is designed to extract the video titles and URLs from the YouTube playlist and showcase them in the console. Here is the code snippet for your convenience:
 
 
-    //COPY & PASTE CODE 2:
+//COPY & PASTE CODE 2:
 
-    clearInterval(goToBottom);
-    let arrayVideos = [];
-    console.log('\n'.repeat(50));
-    const links = document.querySelectorAll('a');
-    for (const link of links) {
-    if (link.id === "video-title") {
-        link.href = link.href.split('&list=')[0];
-        arrayVideos.push(link.title + ';' + link.href);
-        console.log(link.title + '\t' + link.href);
+let seenUrls = new Map();
+links.forEach(link => {
+    let cleanHref = link.href.split('&list=')[0].split('&index=')[0];
+    let title = link.getAttribute('title') || link.title || link.innerText;
+    
+    if (title && cleanHref.includes('watch')) {
+        let cleanTitle = title.trim().replace(/[\r\n]+/g, " ");
+        
+        // Skip it entirely if the title is strictly a timestamp (e.g., 0:28, 14:22, 1:05:30)
+        if (/^(\d{1,2}:)?\d{1,2}:\d{2}$/.test(cleanTitle)) {
+            return; 
+        }
+
+        // If we haven't seen this URL yet, or if this new title is longer/better than the timestamp one
+        if (!seenUrls.has(cleanHref) || cleanTitle.length > seenUrls.get(cleanHref).length) {
+            seenUrls.set(cleanHref, cleanTitle);
+        }
     }
-    }
+});
 
+// Convert our clean map back into your 'f' array format
+arrayVideos = [];
+seenUrls.forEach((title, url) => {
+    // Clean any semicolons out of the title so it doesn't break your CSV columns
+    let safeTitle = title.replace(/;/g, ',');
+    arrayVideos.push(`${safeTitle};${url}`);
+});
 
+console.clear();
+console.log(`Success! Cleaned duplicates. Total unique videos: ${f.length}`);
 
-Upon pasting the second code snippet, the console will exhibit the video titles and URLs in the desired format. At this point, you have the option to copy this data and paste it into a spreadsheet for additional analysis or any other purpose you deem necessary.
 
 Step 5: Optional Step – To proceed with exporting the data as a CSV file, you can follow an optional step. This step enables you to download the data in CSV format, utilizing a semicolon (;) as the separator.
 

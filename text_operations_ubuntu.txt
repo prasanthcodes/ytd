@@ -1,0 +1,5 @@
+to store all string after 'watch?v=' to a file 'filename.txt'
+
+sed -n 's/.*watch?v=//p' new9.csv > filename.txt
+
+
