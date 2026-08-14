@@ -18,6 +18,7 @@ Step 4: Once the scrolling action concludes, you can continue by pasting the sec
 
 //COPY & PASTE CODE 2:
 
+const links = document.querySelectorAll('a');
 let seenUrls = new Map();
 links.forEach(link => {
     let cleanHref = link.href.split('&list=')[0].split('&index=')[0];
